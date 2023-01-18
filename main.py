@@ -4,6 +4,7 @@ import random
 ScoreAi = 0
 ScorePlayer = 0
 while True:
+  print('-----------------------------------------------------')
   print('choose between:')
   print('1) Rock')
   print('2) Paper')
@@ -13,38 +14,53 @@ while True:
   print('The Computer chose ' + str(Computer))
   if PlayerOne == Computer:
     print('It is a tie!')
+    print('-----------------------------------------------------')
     ScoreAi = ScoreAi + 1
     ScorePlayer = ScorePlayer + 1
   elif PlayerOne == 1 and Computer == 2:
     print(' Computers Paper beats your rock! You lose! ')
+    print('-----------------------------------------------------')
     ScoreAi = ScoreAi + 1
   elif PlayerOne == 1 and Computer == 3:
     print('Your Rock beats Computers scissors! You win!')
+    print('-----------------------------------------------------')
     ScorePlayer = ScorePlayer + 1
   elif PlayerOne == 2 and Computer == 3:
     print('Computers Scissors beats your paper! You Lose!')
+    print('-----------------------------------------------------')
     ScoreAi = ScoreAi + 1
   elif PlayerOne == 2 and Computer == 1:
     print('Your Paper beats Computers rock! You Win!')
+    print('-----------------------------------------------------')
     ScorePlayer = ScorePlayer + 1
   elif PlayerOne == 3 and Computer == 2:
     print('Your Scissors beats Computers paper! You Win!')
+    print('-----------------------------------------------------')
     ScorePlayer = ScorePlayer + 1
   elif PlayerOne == 3 and Computer == 1:
     print('Computers Rock beats your paper! You Lose!')
+    print('-----------------------------------------------------')
     ScoreAi = ScoreAi + 1
   print('Do you want to keep playing?')
   print('1) Yes')
   print('2) No')
   Choice = input('Choose 1 or 2.')
 
-  
-  print('Thank you for playing!')
-  break
-
-  
-  urllib.request.urlretrieve(
-  'https://media.istockphoto.com/id/1056840214/vector/rock-paper-scissors-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=EbGQn0HknRzWKhfbWwl2rDyZeRh5OERbVGr-PZgh-qM=')
-  
-img=Image.open("https://media.istockphoto.com/id/1056840214/vector/rock-paper-scissors-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=EbGQn0HknRzWKhfbWwl2rDyZeRh5OERbVGr-PZgh-qM=")
-img.show()
+  if Choice == '2':
+    print('-----------------------------------------------------')
+    print('You won ' + str(ScorePlayer) + ' game/s and the computer won ' + str(ScoreAi) + ' game/s.')
+    if ScorePlayer > ScoreAi:
+      print('Congratulations! You win!')
+    elif ScorePlayer < ScoreAi:
+      print('The computer won most of the games. You lose!')
+    else:
+      print('Tie!')
+    print('-----------------------------------------------------')  
+    print('Thank you for playing!')
+    print("(rock-paper-scissors)")
+   
+    print(' __     ____') 
+    print("/  \    |  |    ]< ")
+    print("----    ----") 
+    
+    break
